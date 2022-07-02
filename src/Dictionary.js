@@ -3,8 +3,8 @@ import React, {useState} from "react";
 import "./Dictionary.css"
 import Results from "./Results"
 
-export default function Dictionary(){
-    let [word, setWord] = useState("");
+export default function Dictionary(props){
+    let [word, setWord] = useState(props.defaultKeyword);
     let [result, setResult] = useState(null);
     
     function handleresponse(response){
@@ -27,10 +27,15 @@ export default function Dictionary(){
 
     return (
         <div className="Dictionary">
-            <form onSubmit={search}>
-                <input type="search" onChange={handleWordChange}/>
-            </form>
+            <section className="searchbox">
+                <h1>What word do you looking for?!</h1>
+                <form onSubmit={search}>
+                    <input type="search" onChange={handleWordChange}/>
+                </form>
+                 <span className="hint">some suggested words : sunset,wine,plants,...</span>
+            </section>  
             <Results result={result} />
+            
         </div>
     )
 }

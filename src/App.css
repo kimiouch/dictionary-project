@@ -1,0 +1,30 @@
+body {
+  background-color: #e3f6e4;
+}
+a {
+  color: #3c963c;
+} 
+
+a:hover{
+ color: #03b95e;
+}
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.App-header {
+  margin: 30px 0;
+}
+.App-logo {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+.App-footer {
+  text-align: center;
+  margin: 30px 0;
+}
+footer {
+    margin: 15px;
+}
