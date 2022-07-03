@@ -14,9 +14,9 @@ function App() {
 
       <footer className='text-center'>
         Coded by Kimia Haghighi 🦕, and is 
-        <a href='https://github.com/kimiouch/dictionary-project'  target="_blank"> open-sourced on Github </a>
+        <a href='https://github.com/kimiouch/dictionary-project'  target="_blank" rel="noreferrer"> open-sourced on Github </a>
         hosted on
-        <a href='https://www.netlify.com/' target="_blank"> netlify </a>
+        <a href='https://www.netlify.com/' target="_blank" rel="noreferrer"> netlify </a>
       </footer>
 
      </div>
