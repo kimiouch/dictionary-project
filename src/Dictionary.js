@@ -21,7 +21,7 @@ export default function Dictionary(props){
 
     
 
-    function search(event) {
+    function search() {
 
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
         axios.get(apiUrl).then(handleresponse);
@@ -33,11 +33,16 @@ export default function Dictionary(props){
         axios.get(photoApiUrl, { headers: headers} ).then(handlephotoresponse);
     }
     
-    function handleWordChange(event) {
+    function handelKeywordSearch(event) {
         setWord(event.target.value);
 
     }
 
+     function handelSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+ 
     function load() {
     setLoaded(true);
     search();
@@ -49,8 +54,8 @@ export default function Dictionary(props){
         <div className="Dictionary">
             <section className="searchbox">
                 <h1>What word do you looking for?!</h1>
-                <form onSubmit={search}>
-                    <input type="search" onChange={handleWordChange} value="jungle"/>
+                <form onSubmit={handelSubmit}>
+                    <input type="search" onChange={handelKeywordSearch} defaultValue={props.defaultKeyword} />
                 </form>
                  <span className="hint">some suggested words : sunset,wine,plants,...</span>
             </section>  

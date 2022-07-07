@@ -6,6 +6,7 @@
     margin: 20px 0;
 }
 
+
 .Dictionary h1 {
   font-size: 18px;
   font-weight: bold;
@@ -13,10 +14,12 @@
 }
 
 .Dictionary .searchbox {
-
-margin: 30px 150px;
+  margin: 30px 150px;
 }
 
+.Dictionary .results section {
+  margin: 0 150px;
+}
 
 .Dictionary input {
   width: 100%;
